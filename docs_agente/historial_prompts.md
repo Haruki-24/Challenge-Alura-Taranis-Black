@@ -150,7 +150,7 @@
 - **Etapa:** Informe de análise de dados e problemas de negócio (consultoria/auditoria).
 - **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`).
 - **Prompt (resumen):** El usuario solicitó preparar el primer informe en PDF posterior al documento de carga y presentación: análisis de datos y problemas de negocio detectados en Taranis Black, con enfoque de consultoría de auditoría, basado en el kit y en lo trabajado en `docs_agente/`.
-- **Artefactos:** `docs_agente/06_informe_analise_dados_problemas_negocio.pdf` (6 páginas; gerado com reportlab a partir de dados verificados).
+- **Artefactos:** `docs_agente/06_informe_analise_dados_problemas_negocio.pdf` (6 páginas; regenerado con fpdf2 a partir de datos verificados, corrigiendo errores de impresión).
 - **Estado:** Completado.
 
 ---
