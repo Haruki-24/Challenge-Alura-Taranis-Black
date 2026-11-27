@@ -110,6 +110,18 @@
 
 ---
 
+## #006 — Optimización de carga de datos y presentación de la información (Finanzas)
+
+- **Fecha:** 2026-11-26 (interacción en curso).
+- **Etapa:** Diseño de carga de datos y presentación ejecutiva (BI/visualización).
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado).
+- **Prompt (resumen):** El usuario solicitó avanzar desde el diagnóstico hacia el diseño de una solución para optimizar la carga/preparación de datos y estructurar la presentación de la información en Taranis Black (Finanzas), proponiendo la mejor organización (secciones, vistas, indicadores, tablas, controles de calidad y apoyos visuales) sin imponer una estructura cerrada ni inventar datos faltantes.
+- **Fuentes revisadas:** guía oficial, documentos de `docs_agente/` (00–04), `05_Finanzas_Presupuesto_vs_Real.xlsx`, `06_SIPOC.pdf`, `01_Catalogo...`, entregables previos.
+- **Artefactos:** `docs_agente/05_optimizacion_carga_y_presentacion.md` (creado tras aprobación del Plan de Ruta).
+- **Estado:** Completado.
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
