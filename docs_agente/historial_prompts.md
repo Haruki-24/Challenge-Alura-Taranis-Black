@@ -133,6 +133,17 @@
 
 ---
 
+## #008 — Revisão e correção de fórmulas da plantilla Excel
+
+- **Fecha:** 2026-11-26 (interacción en curso).
+- **Etapa:** Revisão de integridade de fórmulas (Excel).
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`).
+- **Prompt (resumen):** El usuario solicitó revisar el archivo Excel y corregir enlaces de fórmulas y consultas dañadas. Se detectó que las fórmulas de `Control_Calidad_DQ` referenciaban el nombre de pestaña con acentos (`Carga_y_Exceções`) distinto al nombre real (`Carga_y_Excepciones`), además de ajustar la fórmula de inadimplencia (usar ingresos B2B) y la etiqueta del KPI de fletes.
+- **Artefactos:** `docs_agente/Taranis_Black_Modelo_Gerencial.xlsx` (corregido).
+- **Estado:** Completado.
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
