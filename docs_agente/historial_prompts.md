@@ -56,6 +56,24 @@
 
 ---
 
+## #002 — Diagnóstico inicial de datos y flujo (etapa inicial de análisis)
+
+- **Fecha:** 2026-11-26 (interacción en curso).
+- **Etapa:** Análisis inicial de datos y flujo (Finanzas).
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado).
+- **Prompt (resumen):** El usuario solicitó pasar a la etapa inicial de análisis de datos y flujo para Taranis Black (Finanzas): consultar la guía oficial y el índice del kit; revisar `05_Finanzas_Presupuesto_vs_Real.xlsx` y `06_Descripcion_del_proceso_operativo_SIPOC.pdf`; estructurar contexto y desafíos de datos, control interno y procesos; definir flujo de trabajo por etapas; inspeccionar la estructura real de los archivos con `.venv` antes de conclusiones numéricas; presentar Plan de Ruta para `docs_agente/01_diagnostico_inicial_datos_y_flujo.md`; registrar este prompt; esperar aprobación antes de crear el documento.
+- **Cita clave:** "En esta etapa inicial, quiero que: 1. Consultes ... 2. Estructures el contexto ... 3. Definas el flujo de trabajo por etapas ... 4. ... inspecciona la estructura real de los archivos usando el entorno `.venv` antes de sacar conclusiones numéricas".
+- **Fuentes inspeccionadas (Hecho / Evidencia en archivo):**
+  - `docs_challenge/Guia_oficial_informe_ES.pdf` (2 págs.): entrega oficial, etapas Ruta 0 (obligatorias) y vertical (Ruta 4: Etapa 1 obligatoria, Etapa 2 opcional), tabla de evidencias y permisos.
+  - `docs_challenge/taranis_black/00_Indice_y_guia_del_kit_de_datos.md`: descripción de archivos y recomendaciones por ruta.
+  - `docs_challenge/taranis_black/06_Descripcion_del_proceso_operativo_SIPOC.pdf` (3 págs.): macroproceso B2B (70% de ingresos, USD 33,6 M/año), 5 pasos AS-IS, SIPOC, causas raíz 6M.
+  - `docs_challenge/taranis_black/05_Finanzas_Presupuesto_vs_Real.xlsx`: hojas `Resultados_trimestrales` (24x16), `Ingresos_por_producto` (6x8), `Cuellos_de_botella_y_costos` (6x6).
+- **Artefactos:** `docs_agente/01_diagnostico_inicial_datos_y_flujo.md` (creado tras aprobación del Plan de Ruta).
+- **Fuentes adicionales incorporadas:** `docs_challenge/entregables/Auditoria de proceso Taranis.docx` (diagnóstico AS-IS base), `05_Finanzas_Presupuesto_vs_Real.xlsx`, `06_Descripcion_del_proceso_operativo_SIPOC.pdf`, `Guia_oficial_informe_ES.pdf`.
+- **Estado:** Completado.
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
