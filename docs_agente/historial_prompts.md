@@ -88,6 +88,17 @@
 
 ---
 
+## #004 — Matriz de Esfuerzo × Impacto y métricas de éxito (Informe Ruta 4)
+
+- **Fecha:** 2026-11-26 (interacción en curso).
+- **Etapa:** Priorización y métricas (Ruta 0, Etapa 2).
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado).
+- **Prompt (resumen):** El usuario solicitó avanzar con la matriz de Esfuerzo × Impacto y las métricas de éxito correspondientes al `Informe_Ruta_4_finanzas_ES.docx`, a partir del TO-BE y del diagnóstico previo.
+- **Artefactos:** `docs_agente/03_matriz_esfuerzo_impacto_y_metricas.md` (creado tras aprobación del Plan de Ruta).
+- **Estado:** Completado.
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
