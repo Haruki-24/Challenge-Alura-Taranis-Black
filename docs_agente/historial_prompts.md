@@ -122,6 +122,17 @@
 
 ---
 
+## #007 — Construcción de plantilla Excel gerencial/financiera/operativa (Taranis Black)
+
+- **Fecha:** 2026-11-26 (interacción en curso).
+- **Etapa:** Implementación de plantilla Excel auditada (BI/finanzas).
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`) con openpyxl.
+- **Prompt (resumen):** El usuario solicitó construir el archivo Excel propuesto a partir de `05_optimizacion_carga_y_presentacion.md` y los archivos oficiales, con datos reales (05 y catálogo 01), estructura operativa sin datos falsos, cero valores hardcodeados en cálculos (solo fórmulas), presentación profesional y pestaña final de Premisas/Reglas/Auditoría.
+- **Artefactos:** `docs_agente/Taranis_Black_Modelo_Gerencial.xlsx` (gerado com 11 abas, fórmulas dinâmicas, gráficos, validações e formatação condicional).
+- **Estado:** Completado.
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
