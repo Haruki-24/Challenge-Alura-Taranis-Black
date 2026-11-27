@@ -166,6 +166,17 @@
 
 ---
 
+## #011 — Informe de auditoría final en PDF (Taranis Black)
+
+- **Fecha:** 2026-11-27 (interacción en curso).
+- **Etapa:** Informe de auditoría final (consolidado).
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`) + fpdf2.
+- **Prompt (resumen):** El usuario solicitó generar el informe de auditoría final en PDF con secciones: Resumen ejecutivo, Informe diagnóstico con hallazgos relevantes, Propuesta de optimización y mejoras, Matriz de impacto, y Gobernanza y ética.
+- **Artefactos:** `docs_agente/08_informe_auditoria_final.pdf` (5 páginas; gerado com fpdf2, consolidando diagnóstico, otimização, matriz de impacto e governança).
+- **Estado:** Completado.
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
