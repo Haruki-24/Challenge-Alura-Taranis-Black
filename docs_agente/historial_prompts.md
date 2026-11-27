@@ -144,6 +144,17 @@
 
 ---
 
+## #009 — Primeiro informe em PDF: análise de dados e problemas de negócio (Taranis Black)
+
+- **Fecha:** 2026-11-27 (interacción en curso).
+- **Etapa:** Informe de análise de dados e problemas de negócio (consultoria/auditoria).
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`).
+- **Prompt (resumen):** El usuario solicitó preparar el primer informe en PDF posterior al documento de carga y presentación: análisis de datos y problemas de negocio detectados en Taranis Black, con enfoque de consultoría de auditoría, basado en el kit y en lo trabajado en `docs_agente/`.
+- **Artefactos:** `docs_agente/06_informe_analise_dados_problemas_negocio.pdf` (6 páginas; gerado com reportlab a partir de dados verificados).
+- **Estado:** Completado.
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
