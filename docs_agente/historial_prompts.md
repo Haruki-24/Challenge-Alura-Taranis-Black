@@ -99,6 +99,17 @@
 
 ---
 
+## #005 — Gobernanza, ética y cumplimiento (Informe Ruta 4)
+
+- **Fecha:** 2026-11-26 (interacción en curso).
+- **Etapa:** Gobernanza y ética (Ruta 0, Etapa 3).
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado).
+- **Prompt (resumen):** El usuario solicitó avanzar con el documento de gobernanza, ética y cumplimiento correspondiente a la Etapa 3 de la guía oficial, a partir del diagnóstico, TO-BE y matriz de priorización.
+- **Artefactos:** `docs_agente/04_gobernanza_etica_cumplimiento.md` (creado tras aprobación del Plan de Ruta).
+- **Estado:** Completado.
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
