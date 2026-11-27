@@ -128,7 +128,7 @@
 - **Etapa:** Implementación de plantilla Excel auditada (BI/finanzas).
 - **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`) con openpyxl.
 - **Prompt (resumen):** El usuario solicitó construir el archivo Excel propuesto a partir de `05_optimizacion_carga_y_presentacion.md` y los archivos oficiales, con datos reales (05 y catálogo 01), estructura operativa sin datos falsos, cero valores hardcodeados en cálculos (solo fórmulas), presentación profesional y pestaña final de Premisas/Reglas/Auditoría.
-- **Artefactos:** `docs_agente/Taranis_Black_Modelo_Gerencial.xlsx` (gerado com 11 abas, fórmulas dinâmicas, gráficos, validações e formatação condicional).
+- **Artefactos:** `docs_agente/Taranis_Black_Modelo_Gerencial.xlsx` (consolidado em 7 abas: Resumen_Ejecutivo, Finanzas_P&L, Productos_y_Catalogo, Carga_y_Exceções, Control_Calidad_DQ, Base_Dados_Finanzas, Premisas_y_Auditoria; fórmulas dinâmicas, gráficos, validações e formatação condicional).
 - **Estado:** Completado.
 
 ---
