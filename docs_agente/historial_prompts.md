@@ -74,6 +74,20 @@
 
 ---
 
+## #003 — Revisión de documentación de soluciones (Informe Ruta 4 y Canvas IA) y plan TO-BE
+
+- **Fecha:** 2026-11-26 (interacción en curso).
+- **Etapa:** Diseño TO-BE / planificación de rediseño.
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado).
+- **Prompt (resumen):** El usuario solicitó tomar el diagnóstico AS-IS como base para generar el documento de auditoría final; revisar `Informe_Ruta_4_finanzas_ES.docx` y `canvas_ai_tarantis_black.pdf` para evaluar las propuestas de solución con IA; y, tras revisar toda la documentación, presentar el plan TO-BE para comenzar a establecer el plan de ruta.
+- **Fuentes revisadas (Hecho / Evidencia):**
+  - `docs_challenge/Informe_Ruta_4_finanzas_ES.docx`: plantilla oficial con casos de uso de IA (Etapa 1 Ruta 0) y secciones de Etapa 2/3 y Ruta 4 (mayormente placeholders).
+  - `docs_challenge/entregables/canvas_ai_tarantis_black.pdf`: AI Canvas con problema, solución sin/con IA, personas, datos, herramientas e indicadores.
+- **Artefactos:** `docs_agente/02_plan_to_be.md` (creado tras aprobación del Plan de Ruta).
+- **Estado:** Completado.
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
