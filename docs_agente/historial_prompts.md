@@ -155,6 +155,17 @@
 
 ---
 
+## #010 — Segundo informe em PDF: avaliação Excel atual vs. proposto (Taranis Black)
+
+- **Fecha:** 2026-11-27 (interacción en curso).
+- **Etapa:** Informe comparativo de Excel (auditoria e melhoria).
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`).
+- **Prompt (resumen):** El usuario solicitó preparar el segundo informe en PDF: evaluación del Excel actual frente a la propuesta del nuevo Excel a implementar, con diagnóstico técnico/control, propuesta de arquitectura, tabla comparativa Actual vs. Propuesto y beneficios.
+- **Artefactos:** `docs_agente/07_informe_excel_atual_vs_proposto.pdf` (5 páginas; gerado com fpdf2 a partir da inspeção automatizada do Excel atual e da proposta).
+- **Estado:** Completado.
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
