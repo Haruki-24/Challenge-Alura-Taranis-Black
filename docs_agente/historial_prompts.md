@@ -177,6 +177,17 @@
 
 ---
 
+## #012 — Copia y completado del informe oficial (Informe_Ruta_4_finanzas_ES.docx)
+
+- **Fecha:** 2026-11-27 (interacción en curso).
+- **Etapa:** Completado de plantilla oficial (Ruta 0 y Ruta 4).
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`).
+- **Prompt (resumen):** El usuario solicitó crear una copia del informe oficial y completar las secciones pendientes (Etapa 2 y 3 de Ruta 0, Parte 2 Etapa 1 y 2, Anexos) con los datos/avances generados, sin editar el original.
+- **Artefactos:** `docs_agente/Informe_Ruta_4_finanzas_COMPLETO.docx` (copia del informe oficial completada: Etapa 2 y 3 de Ruta 0, Parte 2 Etapa 1 y 2, Resumen ejecutivo y Anexo de evidencias).
+- **Estado:** Completado.
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
