@@ -128,7 +128,7 @@
 - **Etapa:** Implementación de plantilla Excel auditada (BI/finanzas).
 - **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`) con openpyxl.
 - **Prompt (resumen):** El usuario solicitó construir el archivo Excel propuesto a partir de `05_optimizacion_carga_y_presentacion.md` y los archivos oficiales, con datos reales (05 y catálogo 01), estructura operativa sin datos falsos, cero valores hardcodeados en cálculos (solo fórmulas), presentación profesional y pestaña final de Premisas/Reglas/Auditoría.
-- **Artefactos:** `docs_agente/Taranis_Black_Modelo_Gerencial.xlsx` (consolidado em 7 abas: Resumen_Ejecutivo, Finanzas_P&L, Productos_y_Catalogo, Carga_y_Exceções, Control_Calidad_DQ, Base_Dados_Finanzas, Premisas_y_Auditoria; fórmulas dinâmicas, gráficos, validações e formatação condicional).
+- **Artefactos:** `docs_challenge/entregables/Taranis_Black_Modelo_Gerencial.xlsx` (consolidado em 7 abas: Resumen_Ejecutivo, Finanzas_P&L, Productos_y_Catalogo, Carga_y_Exceções, Control_Calidad_DQ, Base_Dados_Finanzas, Premisas_y_Auditoria; fórmulas dinâmicas, gráficos, validações e formatação condicional).
 - **Estado:** Completado.
 
 ---
@@ -139,7 +139,7 @@
 - **Etapa:** Revisão de integridade de fórmulas (Excel).
 - **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`).
 - **Prompt (resumen):** El usuario solicitó revisar el archivo Excel y corregir enlaces de fórmulas y consultas dañadas. Se detectó que las fórmulas de `Control_Calidad_DQ` referenciaban el nombre de pestaña con acentos (`Carga_y_Exceções`) distinto al nombre real (`Carga_y_Excepciones`), además de ajustar la fórmula de inadimplencia (usar ingresos B2B) y la etiqueta del KPI de fletes.
-- **Artefactos:** `docs_agente/Taranis_Black_Modelo_Gerencial.xlsx` (corregido).
+- **Artefactos:** `docs_challenge/entregables/Taranis_Black_Modelo_Gerencial.xlsx` (corregido).
 - **Estado:** Completado.
 
 ---
@@ -150,7 +150,7 @@
 - **Etapa:** Informe de análise de dados e problemas de negócio (consultoria/auditoria).
 - **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`).
 - **Prompt (resumen):** El usuario solicitó preparar el primer informe en PDF posterior al documento de carga y presentación: análisis de datos y problemas de negocio detectados en Taranis Black, con enfoque de consultoría de auditoría, basado en el kit y en lo trabajado en `docs_agente/`.
-- **Artefactos:** `docs_agente/06_informe_analise_dados_problemas_negocio.pdf` (6 páginas; regenerado con fpdf2 a partir de datos verificados, corrigiendo errores de impresión).
+- **Artefactos:** `docs_challenge/entregables/06_informe_analise_dados_problemas_negocio.pdf` (6 páginas; regenerado con fpdf2 a partir de datos verificados, corrigiendo errores de impresión).
 - **Estado:** Completado.
 
 ---
@@ -161,7 +161,7 @@
 - **Etapa:** Informe comparativo de Excel (auditoria e melhoria).
 - **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`).
 - **Prompt (resumen):** El usuario solicitó preparar el segundo informe en PDF: evaluación del Excel actual frente a la propuesta del nuevo Excel a implementar, con diagnóstico técnico/control, propuesta de arquitectura, tabla comparativa Actual vs. Propuesto y beneficios.
-- **Artefactos:** `docs_agente/07_informe_excel_atual_vs_proposto.pdf` (5 páginas; gerado com fpdf2 a partir da inspeção automatizada do Excel atual e da proposta).
+- **Artefactos:** `docs_challenge/entregables/07_informe_excel_atual_vs_proposto.pdf` (5 páginas; gerado com fpdf2 a partir da inspeção automatizada do Excel atual e da proposta).
 - **Estado:** Completado.
 
 ---
@@ -172,7 +172,7 @@
 - **Etapa:** Informe de auditoría final (consolidado).
 - **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`) + fpdf2.
 - **Prompt (resumen):** El usuario solicitó generar el informe de auditoría final en PDF con secciones: Resumen ejecutivo, Informe diagnóstico con hallazgos relevantes, Propuesta de optimización y mejoras, Matriz de impacto, y Gobernanza y ética.
-- **Artefactos:** `docs_agente/08_informe_auditoria_final.pdf` (5 páginas; gerado com fpdf2, consolidando diagnóstico, otimização, matriz de impacto e governança).
+- **Artefactos:** `docs_challenge/entregables/08_informe_auditoria_final.pdf` (5 páginas; gerado com fpdf2, consolidando diagnóstico, otimização, matriz de impacto e governança).
 - **Estado:** Completado.
 
 ---
