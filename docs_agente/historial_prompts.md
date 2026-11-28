@@ -188,6 +188,17 @@
 
 ---
 
+## #013 — Dashboard interactivo en Streamlit (Taranis Black)
+
+- **Fecha:** 2026-11-27 (interacción en curso).
+- **Etapa:** Implementación de dashboard interactivo (BI).
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`) + Streamlit 1.67 + Plotly 7.2.
+- **Prompt (resumen):** El usuario solicitó implementar un dashboard interactivo en Streamlit que consuma el Excel consolidado, con filtros por trimestre, línea de producto y canal, KPIs, gráficos y tablas.
+- **Artefactos:** `docs_agente/dashboard/app.py`, `docs_agente/dashboard/requirements.txt`, `docs_agente/dashboard/README.md`.
+- **Estado:** Completado (validado con AppTest, sin excepciones).
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
