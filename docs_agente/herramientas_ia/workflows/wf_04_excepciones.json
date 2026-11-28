@@ -1,0 +1,51 @@
+{
+  "name": "WF-04 Gestion de Excepciones - Taranis Black",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "excepciones",
+        "responseMode": "responseNode"
+      },
+      "id": "webhook",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const errors = $json.errors || [];\nconst msg = 'Propuesta con excepciones:\\n' + errors.join('\\n') + '\\n\\nCampos recibidos: ' + JSON.stringify($json, null, 2);\nreturn [{ json: { mensagem: msg, errors, dados: $json } }];"
+      },
+      "id": "format-msg",
+      "name": "Formatar Mensagem",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [470, 300]
+    },
+    {
+      "parameters": {
+        "fromEmail": "financiero@taranisblack.com.br",
+        "toEmail": "={{ $json.dados.vendedor || 'vendedor@taranisblack.com.br' }}",
+        "subject": "Excecao na proposta - campos faltantes",
+        "text": "={{ $json.mensagem }}"
+      },
+      "id": "notify-vendedor",
+      "name": "Notificar Vendedor",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [690, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [[{ "node": "Formatar Mensagem", "type": "main", "index": 0 }]]
+    },
+    "Formatar Mensagem": {
+      "main": [[{ "node": "Notificar Vendedor", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "meta": { "instanceId": "taranis-black-local" }
+}

@@ -1,0 +1,80 @@
+{
+  "name": "WF-03 Consulta RAG y Respuesta - Taranis Black",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "rag-respuesta",
+        "responseMode": "responseNode"
+      },
+      "id": "webhook",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.RAG_ENDPOINT }}/rag/consultar",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ consulta: 'Evalua la solicitud de credito', datos_cliente: $json }) }}"
+      },
+      "id": "rag-consult",
+      "name": "RAG Consultar",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [470, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "messages": {
+          "values": [
+            {
+              "role": "system",
+              "content": "Genera un correo estandarizado para el asistente financiero con el dictamen de credito. Incluye: empresa, monto, condicion, score, historial, recomendacion, campos faltantes y prioridad."
+            },
+            {
+              "role": "user",
+              "content": "={{ JSON.stringify($json) }}"
+            }
+          ]
+        },
+        "options": { "temperature": 0.2 }
+      },
+      "id": "llm-email",
+      "name": "LLM Generar Email",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [690, 300]
+    },
+    {
+      "parameters": {
+        "fromEmail": "financiero@taranisblack.com.br",
+        "toEmail": "asistente@taranisblack.com.br",
+        "subject": "=[TRIAGE] {{ $json.cliente_razao }} - USD {{ $json.valor_total }} - Prioridad: {{ $json.prioridad }}",
+        "text": "={{ $json.message.content }}"
+      },
+      "id": "send-email",
+      "name": "Enviar Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [910, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [[{ "node": "RAG Consultar", "type": "main", "index": 0 }]]
+    },
+    "RAG Consultar": {
+      "main": [[{ "node": "LLM Generar Email", "type": "main", "index": 0 }]]
+    },
+    "LLM Generar Email": {
+      "main": [[{ "node": "Enviar Email", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "meta": { "instanceId": "taranis-black-local" }
+}

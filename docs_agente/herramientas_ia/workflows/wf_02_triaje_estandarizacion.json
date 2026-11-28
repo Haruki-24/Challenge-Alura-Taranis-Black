@@ -1,0 +1,85 @@
+{
+  "name": "WF-02 Triaje y Estandarizacion - Taranis Black",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "triaje",
+        "responseMode": "responseNode"
+      },
+      "id": "webhook",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "messages": {
+          "values": [
+            {
+              "role": "system",
+              "content": "Extrae los campos de la propuesta en JSON: cliente_cnpj, cliente_razao, ie, direccion, produto_codigo, quantidade, valor_unit, valor_total, condicao_pagamento, cif_fob, data_entrega, vendedor. Si falta un campo, pon null."
+            },
+            {
+              "role": "user",
+              "content": "={{ $json.texto }}"
+            }
+          ]
+        },
+        "options": { "temperature": 0.1 }
+      },
+      "id": "llm-extract",
+      "name": "LLM Extract Fields",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [470, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const d = JSON.parse($json.message?.content || '{}');\nconst errors = [];\nif (!d.cliente_cnpj) errors.push('R1: CNPJ faltante');\nif (!d.cliente_razao) errors.push('R3: Razon social faltante');\nif (!d.ie) errors.push('R2: IE faltante');\nif (!d.direccion) errors.push('R4: Direccion faltante');\nif (!d.produto_codigo) errors.push('R5: Codigo de producto faltante');\nif (!d.quantidade || d.quantidade <= 0) errors.push('R6: Cantidad invalida');\nif (!d.valor_unit || d.valor_unit <= 0) errors.push('R6: Valor unitario invalido');\nif (!['30','60','90'].includes(String(d.condicao_pagamento))) errors.push('R7: Condicion de pago invalida');\nif (!['CIF','FOB'].includes(String(d.cif_fob))) errors.push('R8: CIF/FOB invalido');\nconst status = errors.length === 0 ? 'Validado' : 'Excecao';\nconst prioridad = (d.valor_total > 50000) ? 'Urgente' : (d.valor_total > 10000) ? 'Alta' : 'Normal';\nreturn [{ json: { ...d, status, prioridad, errors } }];"
+      },
+      "id": "validate",
+      "name": "Validar R1-R9",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [690, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "valid",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "Validado",
+              "operator": { "type": "string", "operation": "equals" }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "if-valid",
+      "name": "IF Valido",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [910, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [[{ "node": "LLM Extract Fields", "type": "main", "index": 0 }]]
+    },
+    "LLM Extract Fields": {
+      "main": [[{ "node": "Validar R1-R9", "type": "main", "index": 0 }]]
+    },
+    "Validar R1-R9": {
+      "main": [[{ "node": "IF Valido", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "meta": { "instanceId": "taranis-black-local" }
+}

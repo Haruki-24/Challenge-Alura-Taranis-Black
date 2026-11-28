@@ -199,6 +199,17 @@
 
 ---
 
+## #014 — Herramientas IA (n8n): RAG, triaje y estandarización de email
+
+- **Fecha:** 2026-11-27 (interacción en curso).
+- **Etapa:** Diseño de herramientas IA para automatización de flujo (n8n).
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado).
+- **Prompt (resumen):** El usuario solicitó crear `docs_agente/herramientas_ia/` con documentación de bases para el agente RAG, triaje y estandarización de email, evaluando viabilidad local de n8n y proponiendo una solución creativa (simulación de entrada de correo).
+- **Artefactos:** `docs_agente/herramientas_ia/` (01-05.md, README.md, simulador Streamlit, 4 workflows JSON) — LLM cloud (OpenAI/Anthropic), RAG con vector DB, triaje/estandarización con validaciones R1-R9.
+- **Estado:** Completado.
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
