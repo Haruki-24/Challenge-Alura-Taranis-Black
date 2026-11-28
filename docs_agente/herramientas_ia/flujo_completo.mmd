@@ -1,0 +1,16 @@
+flowchart TD
+    A[Correo / Propuesta] --> B[IMAP Trigger / Webhook]
+    B --> C[Extract Text / OCR]
+    C --> D[LLM: Extraer campos JSON]
+    D --> E{Validar R1-R9}
+    E -->|Valido| F[HTTP: Agente RAG]
+    E -->|Invalido| G[Formatar Excepcion]
+    F --> H[LLM: Generar correo estandarizado]
+    H --> I[Enviar Email al asistente]
+    I --> J[Registrar en Staging]
+    G --> K[Notificar vendedor]
+    K --> L[Registrar en Excepciones]
+    J --> M[Dashboard / Presentacion]
+    L --> M
+    style A fill:#1F3864,color:#fff
+    style M fill:#548235,color:#fff

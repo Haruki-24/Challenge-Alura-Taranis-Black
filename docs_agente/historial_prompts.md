@@ -210,6 +210,17 @@
 
 ---
 
+## #015 — Informe PDF: integración y uso de herramientas IA (n8n) + diagrama Mermaid
+
+- **Fecha:** 2026-11-27 (interacción en curso).
+- **Etapa:** Informe de integración de herramientas IA.
+- **Herramienta / Modelo:** VS Code + OpenCode (SST) / Beam Free (`opencode/beam-free`, declarado); Python 3.13.2 (`.venv`) + fpdf2; Node.js 24 + npx (Mermaid CLI).
+- **Prompt (resumen):** El usuario solicitó generar un informe PDF detallando la integración y uso de las herramientas IA (n8n, RAG, triaje, estandarización) en el proceso propuesto, incluyendo un diagrama de flujo en Mermaid y conservando la imagen.
+- **Artefactos:** `docs_agente/09_informe_integracion_herramientas_ia.pdf` (5 páginas, con diagrama Mermaid incluido) y `docs_agente/herramientas_ia/flujo_completo.png` (diagrama de flujo completo).
+- **Estado:** Completado.
+
+---
+
 ## Notas para registros futuros
 
 - Antes de generar cualquier documento nuevo en `docs_agente/`, presentar primero un Plan de Ruta y esperar aprobación (regla de `AGENTS.md`).
